@@ -13,7 +13,7 @@ type sortTest struct {
 }
 
 var sortTableTests = []sortTest{
-	// sorted slice
+	// unsorted slice
 	{
 		input:    []int{5, 3, 1, 4, 8, 2, 6, 10, 7, 9},
 		expected: []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
@@ -33,7 +33,7 @@ var sortTableTests = []sortTest{
 		input:    []int{-10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
 		expected: []int{-10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
 	},
-	// reversed slice with negative values
+	// unsorted slice with negative values
 	{
 		input:    []int{10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0, -1, -2, -3, -4, -5, -6, -7, -8, -9, -10},
 		expected: []int{-10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
