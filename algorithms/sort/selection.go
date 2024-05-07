@@ -1,5 +1,6 @@
 package sort
 
+// complexity O(n**2)
 func SelectionSort(arr []int) []int {
 	for i := 0; i < len(arr); i++ {
 		min := i

@@ -1,17 +1,18 @@
 package search
 
+// complexity O(log(n))
 func BinarySearch(arr []int, target int) (int, error) {
-	low := 0
-	high := len(arr) - 1
-	for low <= high {
-		middle := (low + high) / 2
+	min := 0
+	max := len(arr) - 1
+	for min <= max {
+		middle := (min + max) / 2
 		guess := arr[middle]
 		if guess == target {
 			return middle, nil
 		} else if guess > target {
-			high = middle - 1
+			max = middle - 1
 		} else {
-			low = middle + 1
+			min = middle + 1
 		}
 	}
 	return -1, ErrNotFound
