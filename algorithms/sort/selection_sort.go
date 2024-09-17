@@ -4,10 +4,10 @@ package sort
 func SelectionSort(arr []int) []int {
 	sortedArr := make([]int, len(arr))
 	copy(sortedArr, arr)
-	for i := 0; i < len(arr); i++ {
+	for i := 0; i < len(sortedArr); i++ {
 		min := i
-		for j := i + 1; j < len(arr); j++ {
-			if arr[j] < arr[min] {
+		for j := i + 1; j < len(sortedArr); j++ {
+			if sortedArr[j] < sortedArr[min] {
 				min = j
 			}
 		}

@@ -1,7 +1,7 @@
 package tests
 
 import (
-	"slices"
+	"reflect"
 	"testing"
 
 	"github.com/jfilipedias/algorithms/algorithms/sort"
@@ -58,7 +58,18 @@ var sortTableTests = []sortTest{
 func TestSelectionSort(t *testing.T) {
 	for _, test := range sortTableTests {
 		got := sort.SelectionSort(test.input)
-		isSorted := slices.Equal(got, test.expected)
+		isSorted := reflect.DeepEqual(got, test.expected)
+
+		if !isSorted {
+			t.Errorf("expected %v but got %v", test.expected, got)
+		}
+	}
+}
+
+func TestQuickSort(t *testing.T) {
+	for _, test := range sortTableTests {
+		got := sort.QuickSort(test.input)
+		isSorted := reflect.DeepEqual(got, test.expected)
 
 		if !isSorted {
 			t.Errorf("expected %v but got %v", test.expected, got)
