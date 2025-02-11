@@ -15,5 +15,5 @@ func BinarySearch(arr []int, target int) (int, error) {
 			min = middle + 1
 		}
 	}
-	return -1, ErrNotFound
+	return 0, ErrNotFound
 }
