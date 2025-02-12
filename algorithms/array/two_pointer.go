@@ -8,7 +8,7 @@ func reverseWords(s string) string {
 
 	for r < length {
 		if r+1 < length && runes[r+1] != ' ' {
-			r++
+			r += 1
 		} else {
 			for i, j := l, r; i < j; i, j = i+1, j-1 {
 				runes[i], runes[j] = runes[j], runes[i]

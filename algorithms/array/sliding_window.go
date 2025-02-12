@@ -22,7 +22,7 @@ func maximumLengthSubstring(s string) int {
 			max = r - l + 1
 		}
 
-		r++
+		r += 1
 	}
 
 	return max
