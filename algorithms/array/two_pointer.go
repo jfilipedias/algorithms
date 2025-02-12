@@ -1,5 +1,6 @@
 package array
 
+// complexity O(n)
 func reverseWords(s string) string {
 	runes := []rune(s)
 	length := len(runes)
