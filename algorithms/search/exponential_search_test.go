@@ -2,7 +2,7 @@ package search
 
 import "testing"
 
-var binarySearchTableTest = []struct {
+var exponentailSearchTableTest = []struct {
 	name   string
 	in     []int
 	target int
@@ -20,15 +20,22 @@ var binarySearchTableTest = []struct {
 		target: 13,
 		want:   -1,
 	},
+	{
+		name:   "big slice",
+		in:     []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40},
+		target: 32,
+		want:   31,
+	},
 }
 
-func TestBinarySearch(t *testing.T) {
-	for _, tt := range binarySearchTableTest {
+func TestExponentialSearch(t *testing.T) {
+	for _, tt := range exponentailSearchTableTest {
 		t.Run(tt.name, func(t *testing.T) {
-			got := binarySearch(tt.in, tt.target)
+			got := exponentialSearch(tt.in, tt.target)
 			if got != tt.want {
 				t.Errorf("expected %d, but got %d", tt.want, got)
 			}
 		})
 	}
+
 }
