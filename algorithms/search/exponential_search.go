@@ -20,5 +20,5 @@ func exponentialSearch(nums []int, target int) int {
 		return i
 	}
 
-	return binarySearch(nums[i/2:i], target)
+	return binarySearch(nums, target, i/2, i)
 }

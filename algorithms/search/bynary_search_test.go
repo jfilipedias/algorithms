@@ -25,7 +25,7 @@ var binarySearchTableTest = []struct {
 func TestBinarySearch(t *testing.T) {
 	for _, tt := range binarySearchTableTest {
 		t.Run(tt.name, func(t *testing.T) {
-			got := binarySearch(tt.in, tt.target)
+			got := binarySearch(tt.in, tt.target, 0, len(tt.in)-1)
 			if got != tt.want {
 				t.Errorf("expected %d, but got %d", tt.want, got)
 			}

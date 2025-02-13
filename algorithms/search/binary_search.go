@@ -1,14 +1,12 @@
 package search
 
 // complexity O(log n)
-func binarySearch(arr []int, target int) int {
-	min := 0
-	max := len(arr) - 1
+func binarySearch(nums []int, target, min, max int) int {
 	for min <= max {
 		middle := (min + max) / 2
-		if arr[middle] == target {
+		if nums[middle] == target {
 			return middle
-		} else if arr[middle] > target {
+		} else if nums[middle] > target {
 			max = middle - 1
 		} else {
 			min = middle + 1
