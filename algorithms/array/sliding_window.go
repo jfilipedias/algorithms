@@ -1,5 +1,8 @@
 package array
 
+// 3090. Maximum Length Substring With Two Occurrences
+// Given a string `s`, return the maximum length of a substring
+// such that it contains at most two occurrences of each character.
 func maximumLengthSubstring(s string) int {
 	runes := []rune(s)
 	l, r := 0, 0

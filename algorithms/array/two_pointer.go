@@ -1,6 +1,9 @@
 package array
 
-// complexity O(n)
+// 557. Reverse Words in a String III
+// Given a string `s`, reverse the order of characters in each word
+// within a sentence while still preserving whitespace and initial
+// word order.
 func reverseWords(s string) string {
 	runes := []rune(s)
 	length := len(runes)
