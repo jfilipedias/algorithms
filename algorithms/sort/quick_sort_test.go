@@ -57,7 +57,7 @@ func TestQuickSort(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			got := QuickSort(tt.in)
 			if !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("out %v but got %v", tt.want, got)
+				t.Errorf("want %v but got %v", tt.want, got)
 			}
 		})
 	}

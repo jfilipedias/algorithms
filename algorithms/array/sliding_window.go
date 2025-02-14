@@ -15,7 +15,7 @@ func maximumLengthSubstring(s string) int {
 
 		for counter[runes[r]] >= 3 {
 			counter[runes[l]] -= 1
-			l++
+			l += 1
 		}
 
 		if r-l+1 > max {
